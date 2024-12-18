@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "php-stubs/acf-pro-stubs": "^6.3",
+        "php-stubs/gravity-forms-stubs": "^2.8",
+        "php-stubs/woocommerce-stubs": "^9.5",
+        "php-stubs/wordpress-seo-stubs": "^20.5"
+    }
+}
