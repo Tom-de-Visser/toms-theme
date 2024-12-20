@@ -17,7 +17,7 @@
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
 
-		<header id="site-header" class="bg-white shadow-sm h-24 px-6 md:px-12 fixed flex items-center w-full justify-between">
+		<header id="site-header" class="bg-white shadow-sm h-24 px-6 md:px-12 fixed flex z-20 items-center w-full justify-between">
 			<a href="/">Logo</a>
 
 			<nav class="hidden md:flex">

@@ -63,6 +63,13 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'title'                 => __( 'Theme Settings', 'strl' ),
 				'fields'                => array(
 					array(
+						'key'       => 'field_theme_settings_socials_tab',
+						'label'     => __( 'Socials', 'strl' ),
+						'name'      => 'socials_tab',
+						'type'      => 'tab',
+						'placement' => 'left',
+					),
+					array(
 						'key'        => 'field_theme_settings_socials',
 						'label'      => __( 'Socials', 'strl' ),
 						'name'       => 'socials',
@@ -78,6 +85,12 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 								'key'   => 'field_theme_settings_socials_linkedin',
 								'label' => __( 'LinkedIn', 'strl' ),
 								'name'  => 'linkedin',
+								'type'  => 'url',
+							),
+							array(
+								'key'   => 'field_theme_settings_socials_instagram',
+								'label' => __( 'Instagram', 'strl' ),
+								'name'  => 'instagram',
 								'type'  => 'url',
 							),
 						),
