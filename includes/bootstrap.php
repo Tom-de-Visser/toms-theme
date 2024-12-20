@@ -8,6 +8,41 @@
 add_filter( 'xmlrpc_enabled', '__return_false' );
 
 /**
+ * Turn off the file editors.
+ *
+ * @return void
+ */
+function toms_disable_file_editor(): void {
+	define( 'DISALLOW_FILE_EDIT', true );
+}
+add_action( 'after_setup_theme', 'toms_disable_file_editor' );
+
+/**
+ * Unregister widgets.
+ *
+ * @return void
+ */
+function toms_unregister_widgets(): void {
+	unregister_widget( 'WP_Widget_Archives' );
+	unregister_widget( 'WP_Widget_Block' );
+	unregister_widget( 'WP_Widget_Calendar' );
+	unregister_widget( 'WP_Widget_Categories' );
+	unregister_widget( 'WP_Widget_Links' );
+	unregister_widget( 'WP_Widget_Media_Audio' );
+	unregister_widget( 'WP_Widget_Media_Gallery' );
+	unregister_widget( 'WP_Widget_Media_Image' );
+	unregister_widget( 'WP_Widget_Media_Video' );
+	unregister_widget( 'WP_Widget_Meta' );
+	unregister_widget( 'WP_Widget_Pages' );
+	unregister_widget( 'WP_Widget_Recent_Comments' );
+	unregister_widget( 'WP_Widget_Recent_Posts' );
+	unregister_widget( 'WP_Widget_RSS' );
+	unregister_widget( 'WP_Widget_Search' );
+	unregister_widget( 'WP_Widget_Tag_Cloud' );
+}
+add_action( 'widgets_init', 'toms_unregister_widgets' );
+
+/**
  * Set a custom excerpt length.
  *
  * @param int $length The length of the excerpt.
@@ -116,7 +151,7 @@ add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
  * @return void
  */
 function tom_register_sidebars(): void {
-	$footer_areas = 2;
+	$footer_areas = 4;
 
 	for ( $i = 1; $i <= $footer_areas; $i++ ) {
 		register_sidebar(
