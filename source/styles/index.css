@@ -6,6 +6,12 @@
 	--toms-header-height: 96px;
 }
 
+@layer components {
+	.button {
+		@apply border border-gray-500 py-2 px-4 text-sm w-fit transition-colors hover:bg-gray-100;
+	}
+}
+
 .admin-bar #off-canvas {
 	top: calc(var(--wp-admin--admin-bar--height) + var(--toms-header-height));
 	height: calc(
