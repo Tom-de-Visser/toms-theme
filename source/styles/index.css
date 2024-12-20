@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--toms-header-height: 96px;
+}
+
+.admin-bar #off-canvas {
+	top: calc(var(--wp-admin--admin-bar--height) + var(--toms-header-height));
+	height: calc(
+		100% - var(--wp-admin--admin-bar--height) - var(--toms-header-height)
+	);
+}
+
+.admin-bar #site-header {
+	top: var(--wp-admin--admin-bar--height);
+}

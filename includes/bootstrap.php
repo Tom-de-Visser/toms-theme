@@ -87,8 +87,8 @@ function toms_setup_theme(): void {
 
 	register_nav_menus(
 		array(
-			'primary'   => __( 'Primary Menu', 'toms' ),
-			'secondary' => __( 'Secondary Menu', 'toms' ),
+			'primary'    => __( 'Primary Menu', 'toms' ),
+			'off-canvas' => __( 'Off-canvas Menu', 'toms' ),
 		)
 	);
 }
@@ -105,7 +105,8 @@ function toms_load_assets(): void {
 	wp_deregister_style( 'global-styles' );
 
 	wp_enqueue_style( 'toms-style-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.css', array(), time() );
-	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array(), time(), true );
+	wp_enqueue_script( 'feather-icons', 'https://unpkg.com/feather-icons', array(), time(), true );
+	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array( 'feather-icons' ), time(), true );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 

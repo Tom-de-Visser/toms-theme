@@ -10,10 +10,13 @@ get_header();
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
-		?>
-		<h1 class="text-xl font-bold"><?php the_title(); ?></h1>
-		<?php the_content(); ?>
-		<?php
+
+		while ( have_rows( 'layouts' ) ) {
+			the_row();
+
+			$layout = get_row_layout();
+			get_template_part( 'layouts/' . $layout . '/' . $layout );
+		}
 	}
 }
 

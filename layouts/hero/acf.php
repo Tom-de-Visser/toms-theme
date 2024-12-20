@@ -7,7 +7,7 @@
 
 $layout_name = 'hero';
 
-$layout = array(
+$layouts[] = array(
 	'key'        => 'layout_' . $layout_name,
 	'name'       => $layout_name,
 	'label'      => __( 'Hero', 'toms' ),

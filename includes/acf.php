@@ -61,7 +61,28 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 			array(
 				'key'                   => 'field_theme_settings',
 				'title'                 => __( 'Theme Settings', 'strl' ),
-				'fields'                => array(),
+				'fields'                => array(
+					array(
+						'key'        => 'field_theme_settings_socials',
+						'label'      => __( 'Socials', 'strl' ),
+						'name'       => 'socials',
+						'type'       => 'group',
+						'sub_fields' => array(
+							array(
+								'key'   => 'field_theme_settings_socials_github',
+								'label' => __( 'GitHub', 'strl' ),
+								'name'  => 'github',
+								'type'  => 'url',
+							),
+							array(
+								'key'   => 'field_theme_settings_socials_linkedin',
+								'label' => __( 'LinkedIn', 'strl' ),
+								'name'  => 'linkedin',
+								'type'  => 'url',
+							),
+						),
+					),
+				),
 				'location'              => array(
 					array(
 						array(
@@ -111,8 +132,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 	function toms_add_acf_fields(): void {
 		acf_add_local_field_group(
 			array(
-				'key'                   => 'group_reviews',
-				'title'                 => 'Reviews Group',
+				'key'                   => 'group_post_fields',
+				'title'                 => __( 'Post fields', 'toms' ),
 				'fields'                => array(),
 				'location'              => array(
 					array(
@@ -128,7 +149,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'instruction_placement' => 'label',
 				'active'                => true,
 				'hide_on_screen'        => array(
-					0 => 'featured_image',
+					0 => 'the_content',
 				),
 			),
 		);

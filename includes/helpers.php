@@ -17,6 +17,37 @@ function toms_dd( mixed $value ): void {
 }
 
 /**
+ * Markup for some credits to the site builder.
+ *
+ * @param bool $should_echo Whether to echo or return the markup.
+ * @return string A link that opens a mail to the site builder.
+ */
+function toms_credits( $should_echo = true ): string {
+	$mail_to      = 'sayhi@tomdevisser.dev';
+	$mail_subject = rawurlencode( 'Website Inquiry from ' . get_bloginfo( 'name' ) );
+	$href         = 'mailto:' . $mail_to . '?subject=' . $mail_subject;
+	ob_start();
+	?>
+	<a href="<?php echo esc_attr( $href ); ?>" aria-label="E-mail Tom, the site's developer">Built by Tom de Visser</a>
+	<?php
+	$credits = ob_get_clean();
+
+	if ( $should_echo ) {
+		echo wp_kses(
+			$credits,
+			array(
+				'a' => array(
+					'href'       => array(),
+					'aria-label' => array(),
+				),
+			)
+		);
+	}
+
+	return $credits;
+}
+
+/**
  * Dump, die, and debug.
  *
  * @param mixed $value The value to dump.
@@ -39,9 +70,26 @@ function toms_nav_menu( string $theme_location = 'primary' ): void {
 	wp_nav_menu(
 		array(
 			'container'      => false,
-			'menu_class'     => 'menu',
+			'menu_class'     => 'gap-8 relative hidden md:flex',
 			'theme_location' => $theme_location,
-			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-parent-link="true">%3$s</ul>',
+			'walker'         => new Toms_Dropdown_Walker(),
+		)
+	);
+}
+
+/**
+ * A helper for retrieving the navigation menu.
+ *
+ * @param string $theme_location The theme location.
+ * @return void
+ */
+function toms_off_canvas_menu( string $theme_location = 'off-canvas' ): void {
+	wp_nav_menu(
+		array(
+			'container'      => false,
+			'menu_class'     => 'flex flex-col gap-2 relative md:hidden',
+			'theme_location' => $theme_location,
+			'walker'         => new Toms_OffCanvas_Walker(),
 		)
 	);
 }
