@@ -7,11 +7,11 @@
 }
 
 @layer base {
-	main,
+	.simple-content,
 	#primary-menu,
 	footer {
 		a:not(.button) {
-			@apply relative after:w-0 after:h-[1px] after:inline-block after:bg-gray-700 after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 hover:after:w-full;
+			@apply text-blue-700 relative after:w-0 after:h-[1px] after:inline-block after:bg-blue-700 after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 hover:after:w-full;
 		}
 	}
 

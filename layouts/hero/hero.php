@@ -12,7 +12,7 @@ $hero_pretitle = get_sub_field( $layout_name . '_pretitle' );
 $hero_text     = get_sub_field( $layout_name . '_text' );
 $hero_button   = get_sub_field( $layout_name . '_button' );
 ?>
-<section class="<?php echo esc_attr( $layout_name ); ?> my-8 pt-24 md:mx-12 lg:mx-24">
+<section class="<?php echo esc_attr( $layout_name ); ?> my-16 pt-24 md:mx-12 lg:mx-24">
 	<div class="flex flex-col gap-2">
 		<div class="flex flex-col">
 			<?php
