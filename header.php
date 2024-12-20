@@ -17,7 +17,7 @@
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
 
-		<header id="site-header" class="h-24 px-6 md:px-12 fixed flex items-center w-full justify-between">
+		<header id="site-header" class="bg-white shadow-sm h-24 px-6 md:px-12 fixed flex items-center w-full justify-between">
 			<a href="/">Logo</a>
 
 			<nav class="hidden md:flex">
@@ -29,7 +29,7 @@
 			</button>
 		</header>
 
-		<div id="off-canvas" class="md:hidden transition-transform bg-white p-6 overflow-auto fixed pointer-events-none w-full top-[var(--toms-header-height)] h-[calc(100dvh-var(--toms-header-height))] translate-x-full">
+		<div id="off-canvas" class="md:hidden transition-transform bg-white p-6 overflow-auto fixed pointer-events-none z-10 w-full top-[var(--toms-header-height)] h-[calc(100dvh-var(--toms-header-height))] translate-x-full">
 			<?php toms_off_canvas_menu(); ?>
 		</div>
 

@@ -6,6 +6,32 @@
 	--toms-header-height: 96px;
 }
 
+@layer base {
+	main,
+	#primary-menu,
+	footer {
+		a:not(.button) {
+			@apply relative after:w-0 after:h-[1px] after:inline-block after:bg-gray-700 after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 hover:after:w-full;
+		}
+	}
+
+	main {
+		ul {
+			@apply list-disc list-inside;
+		}
+
+		blockquote {
+			@apply border-l border-gray-700 pl-4 my-2;
+		}
+	}
+
+	.simple-content {
+		p {
+			@apply my-2;
+		}
+	}
+}
+
 @layer components {
 	.button {
 		@apply border border-gray-500 py-2 px-4 text-sm w-fit transition-colors hover:bg-gray-100;

@@ -70,6 +70,7 @@ function toms_nav_menu( string $theme_location = 'primary' ): void {
 	wp_nav_menu(
 		array(
 			'container'      => false,
+			'menu_id'        => 'primary-menu',
 			'menu_class'     => 'gap-8 relative hidden md:flex',
 			'theme_location' => $theme_location,
 			'walker'         => new Toms_Dropdown_Walker(),
