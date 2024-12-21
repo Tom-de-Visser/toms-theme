@@ -29,7 +29,7 @@
 			</button>
 		</header>
 
-		<div id="off-canvas" class="md:hidden transition-transform bg-white p-6 overflow-auto fixed pointer-events-none z-10 w-full top-[var(--toms-header-height)] h-[calc(100dvh-var(--toms-header-height))] translate-x-full">
+		<div id="off-canvas" class="md:hidden transition-transform ease-out duration-300 bg-white p-6 overflow-auto fixed pointer-events-none z-10 w-full top-[var(--toms-header-height)] h-[calc(100dvh-var(--toms-header-height))] translate-x-full shadow-lg">
 			<?php toms_off_canvas_menu(); ?>
 		</div>
 
