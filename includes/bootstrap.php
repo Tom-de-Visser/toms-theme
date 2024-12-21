@@ -95,6 +95,7 @@ add_action( 'admin_menu', 'toms_remove_admin_menus' );
 function toms_remove_comment_support(): void {
 	remove_post_type_support( 'post', 'comments' );
 	remove_post_type_support( 'page', 'comments' );
+	remove_post_type_support( 'attachment', 'comments' );
 }
 add_action( 'init', 'toms_remove_comment_support', 100 );
 

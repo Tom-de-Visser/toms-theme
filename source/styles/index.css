@@ -6,11 +6,13 @@
 	--toms-header-height: 96px;
 }
 
-@layer base {
+@layer utilities {
 	.animated-underline {
 		@apply relative after:w-0 after:h-[1px] after:inline-block after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 after:bg-primary hover:after:w-full;
 	}
+}
 
+@layer base {
 	main {
 		ul {
 			@apply list-disc list-inside;

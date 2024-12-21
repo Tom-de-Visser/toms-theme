@@ -49,7 +49,7 @@ $socials = get_field( 'socials', 'options' );
 			}
 			?>
 
-			<div class="py-8">
+			<div class="py-8 [&_a]:text-primary [&_a]:hover:animated-underline">
 				<?php toms_credits(); ?>
 			</div>
 		</footer>
