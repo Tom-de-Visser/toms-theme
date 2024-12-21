@@ -5,6 +5,7 @@
  * @package toms
  */
 
+$site_logo = get_field( 'branding_logo', 'option' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -18,7 +19,17 @@
 		<?php wp_body_open(); ?>
 
 		<header id="site-header" class="bg-white shadow-sm h-24 px-6 md:px-12 fixed flex z-20 items-center w-full justify-between">
-			<a href="/">Logo</a>
+			<a href="/">
+				<?php
+				if ( $site_logo ) {
+					?>
+					<img src="<?php echo esc_url( $site_logo['url'] ); ?>" alt="<?php echo esc_attr( $site_logo['alt'] ); ?>" class="h-8">
+					<?php
+				} else {
+					bloginfo( 'name' );
+				}
+				?>
+			</a>
 
 			<nav class="hidden md:flex">
 				<?php toms_nav_menu(); ?>

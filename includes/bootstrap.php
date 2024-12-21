@@ -18,6 +18,18 @@ function toms_disable_file_editor(): void {
 add_action( 'after_setup_theme', 'toms_disable_file_editor' );
 
 /**
+ * Allow SVG uploads.
+ *
+ * @param array $mimes The allowed mime types.
+ * @return array The new allowed mime types.
+ */
+function toms_allow_svg_uploads( array $mimes ): array {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'toms_allow_svg_uploads' );
+
+/**
  * Unregister widgets.
  *
  * @return void

@@ -63,6 +63,27 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'title'                 => __( 'Theme Settings', 'strl' ),
 				'fields'                => array(
 					array(
+						'key'       => 'field_theme_settings_general_tab',
+						'label'     => __( 'General', 'strl' ),
+						'name'      => 'general_tab',
+						'type'      => 'tab',
+						'placement' => 'left',
+					),
+					array(
+						'key'        => 'field_theme_settings_branding',
+						'label'      => __( 'Branding', 'strl' ),
+						'name'       => 'branding',
+						'type'       => 'group',
+						'sub_fields' => array(
+							array(
+								'key'   => 'field_theme_settings_branding_logo',
+								'label' => __( 'Logo', 'strl' ),
+								'name'  => 'logo',
+								'type'  => 'image',
+							),
+						),
+					),
+					array(
 						'key'       => 'field_theme_settings_socials_tab',
 						'label'     => __( 'Socials', 'strl' ),
 						'name'      => 'socials_tab',
