@@ -17,12 +17,13 @@ function toms_add_event_fields(): void {
 			'title'                 => __( 'Event', 'toms' ),
 			'fields'                => array(
 				array(
-					'key'       => 'field_event_date',
-					'label'     => __( 'Date', 'toms' ),
-					'name'      => 'date',
-					'type'      => 'date_time_picker',
-					'first_day' => 1,
-					'wrapper'   => array(
+					'key'           => 'field_event_date',
+					'label'         => __( 'Date', 'toms' ),
+					'name'          => 'date',
+					'type'          => 'date_time_picker',
+					'first_day'     => 1,
+					'return_format' => 'Y-m-d H:i:s',
+					'wrapper'       => array(
 						'width' => '50',
 					),
 				),

@@ -8,7 +8,7 @@
 
 @layer utilities {
 	.animated-underline {
-		@apply relative after:w-0 after:h-[1px] after:inline-block after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 after:bg-primary hover:after:w-full;
+		@apply relative after:w-0 after:h-[1px] after:inline-block after:opacity-50 after:absolute after:left-0 after:transition-all after:duration-300 after:bottom-0 after:bg-gray-400 hover:after:w-full;
 	}
 }
 
@@ -19,18 +19,22 @@
 		}
 
 		blockquote {
-			@apply border-l pl-4 my-2 border-primary;
+			@apply border-l pl-4 my-2 border-gray-500;
 		}
 	}
 }
 
 @layer components {
 	.button {
-		@apply border text-primary-900 py-2 px-4 text-sm w-fit transition-all duration-300 hover:bg-primary-50 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[3px_3px_0_0] hover:shadow-primary;
+		@apply border inline-flex gap-1 items-center text-gray-900 py-2 px-4 text-sm w-fit transition-all duration-300 hover:bg-gray-50 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[3px_3px_0_0] hover:shadow-gray-600;
+
+		svg {
+			@apply size-4 text-gray-900;
+		}
 	}
 
 	.social-icon {
-		@apply text-primary-700 hover:text-primary-400 transition-all duration-500;
+		@apply text-gray-700 hover:text-gray-400 transition-all duration-500;
 	}
 }
 
@@ -55,7 +59,7 @@
 	}
 
 	a:not(.button) {
-		@apply animated-underline text-primary;
+		@apply animated-underline text-gray-800;
 	}
 }
 
@@ -65,6 +69,6 @@
 	}
 
 	a {
-		@apply animated-underline text-primary;
+		@apply animated-underline text-gray-800;
 	}
 }

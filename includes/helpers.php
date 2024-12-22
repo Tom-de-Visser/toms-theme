@@ -144,3 +144,16 @@ function toms_register_post_type( string $name, string $singular, string $plural
 
 	register_post_type( $name, $args );
 }
+
+/**
+ * A helper for getting a template part.
+ *
+ * @param string $slug The slug of the template.
+ * @param string $name The name of the template.
+ * @param array  $args The arguments to pass to the template.
+ * @return void
+ */
+function toms_template_part( string $slug, string $name = null, array $args = array() ): void {
+	$default_folder = 'template-parts/';
+	get_template_part( $default_folder . $slug, $name, $args );
+}

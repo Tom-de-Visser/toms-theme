@@ -10,7 +10,7 @@ $layout_name = 'trusted-by';
 $trusted_by_title = get_sub_field( $layout_name . '_title' );
 $companies        = get_sub_field( $layout_name . '_companies' );
 ?>
-<section class="<?php echo esc_attr( $layout_name ); ?> my-16 md:mx-12 lg:mx-24">
+<section class="<?php echo esc_attr( $layout_name ); ?> my-32 md:mx-12 lg:mx-24">
 	<div class="flex flex-col gap-2 text-center">
 		<?php
 		if ( $trusted_by_title ) {
