@@ -1,5 +1,6 @@
 import "./accessibility.js";
 import "./off-canvas.js";
+import "./swiper.js";
 
 // Short message to fellow developers.
 console.info(
