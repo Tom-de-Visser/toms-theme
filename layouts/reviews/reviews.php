@@ -31,7 +31,7 @@ if ( ! $reviews->have_posts() ) {
 		?>
 	</div>
 
-	<div class="swiper-reviews">
+	<div class="swiper-reviews overflow-hidden">
 		<div class="swiper-wrapper">
 			<?php
 			while ( $reviews->have_posts() ) {

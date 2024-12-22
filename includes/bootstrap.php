@@ -154,7 +154,7 @@ function toms_load_assets(): void {
 
 	wp_enqueue_style( 'toms-style-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.css', array(), time() );
 	wp_enqueue_script( 'feather-icons', 'https://unpkg.com/feather-icons', array(), time(), true );
-	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array( 'feather-icons' ), time(), true );
+	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array(), time(), true );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 
