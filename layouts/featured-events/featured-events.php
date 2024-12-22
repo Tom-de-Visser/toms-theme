@@ -34,7 +34,7 @@ if ( empty( $featured_events ) ) {
 		}
 		?>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_1fr_auto] my-6 lg:grid-cols-3 gap-2">
+		<div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_1fr_auto] my-6 lg:grid-cols-3 gap-12">
 			<?php
 			foreach ( $featured_events as $event ) {
 				toms_template_part( 'event', 'card', array( 'event' => $event ) );

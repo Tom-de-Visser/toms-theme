@@ -18,7 +18,7 @@ if ( strtotime( $event_date ) < time() ) {
 	return;
 }
 ?>
-<article class="grid gap-4 p-6 bg-white shadow-sm border border-gray-200 md:grid-rows-subgrid md:row-start-1 md:row-end-4">
+<article class="grid gap-4 py-6 bg-white md:grid-rows-subgrid md:row-start-1 md:row-end-4">
 	<header class="row-start-1 row-end-2">
 		<?php
 		if ( $event_image ) {
@@ -55,5 +55,6 @@ if ( strtotime( $event_date ) < time() ) {
 			<?php esc_html_e( 'Get tickets', 'toms' ); ?>
 			<i data-feather="external-link"></i>
 		</a>
+		<hr class="mt-6" />
 	</footer>
 </article>

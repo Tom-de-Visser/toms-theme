@@ -23,7 +23,7 @@ $hero_button   = get_sub_field( $layout_name . '_button' );
 			}
 			?>
 
-			<h1 class="text-2xl"><?php echo wp_kses_post( $hero_title ); ?></h1>
+			<h1 class="text-4xl mb-4"><?php echo wp_kses_post( $hero_title ); ?></h1>
 
 			<?php
 			if ( $hero_text ) {
