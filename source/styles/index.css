@@ -53,6 +53,20 @@
 	position: fixed;
 }
 
+header {
+	nav {
+		a {
+			@apply animated-underline text-gray-800;
+		}
+
+		.current-menu-item {
+			a {
+				@apply font-semibold;
+			}
+		}
+	}
+}
+
 .simple-content {
 	p {
 		@apply my-2;
