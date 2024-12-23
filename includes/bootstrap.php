@@ -159,6 +159,17 @@ function toms_load_assets(): void {
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 
 /**
+ * Load the theme's assets.
+ *
+ * @return void
+ */
+function toms_backend_assets(): void {
+	wp_enqueue_style( 'toms-style-backend', get_bloginfo( 'stylesheet_directory' ) . '/dist/backend.css', array(), time() );
+	wp_enqueue_script( 'toms-script-backend', get_bloginfo( 'stylesheet_directory' ) . '/dist/backend.js', array(), time(), true );
+}
+add_action( 'admin_enqueue_scripts', 'toms_backend_assets' );
+
+/**
  * Register the theme's widget areas.
  *
  * @return void
