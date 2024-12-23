@@ -16,7 +16,7 @@ $content_button = get_sub_field( $layout_name . '_button' );
 		<?php
 		if ( $content_title ) {
 			?>
-			<h2 class="text-2xl"><?php echo wp_kses_post( $content_title ); ?></h2>
+			<h2 class="text-2xl mb-6"><?php echo wp_kses_post( $content_title ); ?></h2>
 			<?php
 		}
 		?>
@@ -28,7 +28,7 @@ $content_button = get_sub_field( $layout_name . '_button' );
 		<?php
 		if ( $content_button ) {
 			?>
-			<a href="<?php echo esc_url( $content_button['url'] ); ?>" class="button"><?php echo esc_html( $content_button['title'] ); ?></a>
+			<a href="<?php echo esc_url( $content_button['url'] ); ?>" class="button mt-6"><?php echo esc_html( $content_button['title'] ); ?></a>
 			<?php
 		}
 		?>

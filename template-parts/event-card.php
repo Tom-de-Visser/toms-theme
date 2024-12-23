@@ -29,7 +29,7 @@ if ( strtotime( $event_date ) < time() ) {
 		?>
 		<h3 class="font-bold text-lg"><?php echo esc_html( $event_title ); ?></h3>
 		<time class="text-gray-500 text-sm" datetime="<?php echo esc_attr( $event_date ); ?>">
-			<?php echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $event_date ) ) ); ?>
+			<?php echo esc_html( wp_date( get_option( 'date_format' ), strtotime( $event_date ) ) ); ?>
 		</time>
 		<div class="grid grid-cols-1 gap-1 mt-2">
 			<?php

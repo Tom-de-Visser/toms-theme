@@ -42,7 +42,7 @@ if ( empty( $tabs_repeater ) ) {
 			$tab_content = $tab_fields['content'];
 			?>
 			<div class="<?php echo 0 === $tab_index ? '' : 'hidden'; ?>" id="tab-panel-<?php echo esc_attr( $tab_index ); ?>" role="tabpanel" aria-labelledby="tab-<?php echo esc_attr( $tab_index ); ?>" tabindex="0" aria-hidden="<?php echo 0 === $tab_index ? 'false' : 'true'; ?>">
-				<?php echo wp_kses_post( $tab_content ); ?>
+				<?php echo wp_kses_post( apply_filters( 'the_content', $tab_content ) ); ?>
 			</div>
 			<?php
 		}

@@ -4,6 +4,7 @@
 
 :root {
 	--toms-header-height: 96px;
+	--swiper-theme-color: black;
 }
 
 @layer utilities {
