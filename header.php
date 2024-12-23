@@ -18,7 +18,7 @@ $site_logo = get_field( 'branding_logo', 'option' );
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
 
-		<header id="site-header" class="bg-white shadow-sm h-24 px-6 md:px-12 fixed flex z-20 items-center w-full justify-between">
+		<header id="site-header" class="bg-slate-100 shadow-sm h-24 px-6 md:px-12 fixed flex z-20 items-center w-full justify-between">
 			<a href="/">
 				<?php
 				if ( $site_logo ) {
