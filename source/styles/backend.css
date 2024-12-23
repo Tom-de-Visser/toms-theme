@@ -1,0 +1,25 @@
+.acf-color-picker {
+	.wp-picker-container {
+		.wp-picker-input-wrap {
+			@apply !hidden;
+		}
+
+		.wp-picker-holder {
+			.iris-picker {
+				@apply !size-auto !p-0 !border-0;
+
+				.iris-picker-inner {
+					@apply !hidden;
+				}
+
+				.iris-palette-container {
+					@apply !relative !size-auto !inset-0 !flex !gap-1;
+
+					.iris-palette {
+						@apply !size-8 !m-0;
+					}
+				}
+			}
+		}
+	}
+}

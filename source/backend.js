@@ -1,2 +1,2 @@
 import "./styles/backend.css";
-import "./scripts/tinymce";
+import "./scripts/acf";

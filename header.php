@@ -23,7 +23,7 @@ $site_logo = get_field( 'branding_logo', 'option' );
 				<?php
 				if ( $site_logo ) {
 					?>
-					<img src="<?php echo esc_url( $site_logo['url'] ); ?>" alt="<?php echo esc_attr( $site_logo['alt'] ); ?>" class="h-8">
+					<img src="<?php echo esc_url( $site_logo['url'] ); ?>" alt="<?php echo esc_attr( $site_logo['alt'] ); ?>" class="h-10">
 					<?php
 				} else {
 					bloginfo( 'name' );

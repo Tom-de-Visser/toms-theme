@@ -40,6 +40,12 @@ function toms_add_theme_settings(): void {
 					'type'       => 'group',
 					'sub_fields' => array(
 						array(
+							'key'   => 'field_theme_settings_branding_primary_color',
+							'label' => __( 'Primary color', 'strl' ),
+							'name'  => 'primary_color',
+							'type'  => 'color_picker',
+						),
+						array(
 							'key'   => 'field_theme_settings_branding_logo',
 							'label' => __( 'Logo', 'strl' ),
 							'name'  => 'logo',
