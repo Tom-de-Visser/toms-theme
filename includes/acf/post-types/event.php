@@ -55,10 +55,11 @@ function toms_add_event_fields(): void {
 					),
 				),
 				array(
-					'key'   => 'field_event_description',
-					'label' => __( 'Description', 'toms' ),
-					'name'  => 'description',
-					'type'  => 'wysiwyg',
+					'key'     => 'field_event_description',
+					'label'   => __( 'Description', 'toms' ),
+					'name'    => 'description',
+					'type'    => 'wysiwyg',
+					'toolbar' => 'basic',
 				),
 			),
 			'location'              => array(

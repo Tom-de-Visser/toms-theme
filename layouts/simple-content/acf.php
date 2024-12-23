@@ -25,6 +25,7 @@ $layouts[] = array(
 			'name'     => $layout_name . '_content',
 			'type'     => 'wysiwyg',
 			'required' => true,
+			'toolbar'  => 'basic',
 		),
 		array(
 			'key'   => 'field_' . $layout_name . '_button',

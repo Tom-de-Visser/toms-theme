@@ -41,6 +41,7 @@ $layouts[] = array(
 					'name'     => 'content',
 					'type'     => 'wysiwyg',
 					'required' => true,
+					'toolbar'  => 'basic',
 				),
 			),
 		),

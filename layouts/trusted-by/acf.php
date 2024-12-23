@@ -32,6 +32,9 @@ $layouts[] = array(
 					'name'     => $layout_name . '_logo',
 					'type'     => 'image',
 					'required' => true,
+					'wrapper'  => array(
+						'width' => '25',
+					),
 				),
 				array(
 					'key'   => 'field_' . $layout_name . '_link',
